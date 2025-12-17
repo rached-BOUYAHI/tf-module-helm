@@ -57,6 +57,7 @@ No modules.
 | <a name="input_man_image"></a> [man\_image](#input\_man\_image) | OpenStack image used for man nodes | `string` | `"ubuntu-noble-x86_64"` | no |
 | <a name="input_oidc_providers"></a> [oidc\_providers](#input\_oidc\_providers) | List of OIDC providers. Set issuerIdentifier and userInfoUrl to empty string if not used. | <pre>list(object({<br/>    url              = string<br/>    logoutUrl        = string<br/>    clientId         = string<br/>    label            = string<br/>    issuerIdentifier = string<br/>    userInfoUrl      = string<br/>    responseType     = string<br/>    refreshToken     = optional(bool)<br/>    }<br/>  ))</pre> | n/a | yes |
 | <a name="input_os_auth_url"></a> [os\_auth\_url](#input\_os\_auth\_url) | OpenStack authentication URL (mutually exclusive with aws parameter) | `string` | `""` | no |
+| <a name="input_postgres_value_file"></a> [postgres\_value\_file](#input\_postgres\_value\_file) | File containing Helm values for postgres helm chart | `string` | `"values-postgres.yaml"` | no |
 | <a name="input_postgres_version"></a> [postgres\_version](#input\_postgres\_version) | Version of postgres helm package | `string` | `"1.0.0"` | no |
 | <a name="input_proxy_host"></a> [proxy\_host](#input\_proxy\_host) | FQDN/IP address of proxy jump host | `string` | n/a | yes |
 | <a name="input_proxy_key"></a> [proxy\_key](#input\_proxy\_key) | Base64 encoded proxy jump ssh private key | `string` | n/a | yes |

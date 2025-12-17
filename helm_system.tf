@@ -53,7 +53,7 @@ resource "helm_release" "postgres" {
   namespace  = "cnpg-system"
   repository = var.helm_repository
   chart      = "crczp-postgres"
-  values     = [file("value-files/${terraform.workspace}-postgres.yaml")]
+  values     = [file(var.postgres_value_file)]
 
   set = [{
     name  = "cluster.superuserPassword"

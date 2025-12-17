@@ -156,6 +156,12 @@ variable "oidc_providers" {
   description = "List of OIDC providers. Set issuerIdentifier and userInfoUrl to empty string if not used."
 }
 
+variable "postgres_value_file" {
+  type        = string
+  description = "File containing Helm values for postgres helm chart"
+  default     = "values-postgres.yaml"
+}
+
 variable "proxy_host" {
   type        = string
   description = "FQDN/IP address of proxy jump host"
