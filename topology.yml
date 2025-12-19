@@ -1,0 +1,9 @@
+name: monitoring-sandbox
+description: Minimal monitoring sandbox
+
+nodes:
+  helm:
+    type: terraform
+    terraform:
+      source: https://github.com/rached-BOUYAHI/tf-module-helm.git
+      revision: master
